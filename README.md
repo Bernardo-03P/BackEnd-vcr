@@ -1,19 +1,73 @@
-# BackEnd-vcr
+# VCR Digital - Backend API
 
-Nesta parte você coloca com suas informações da sua tabela.
-PORT = '9000' - porta onde irá funcionar
-USER_NAME = 'postgres'
-HOST_NAME = 'localhost'
-DB_NAME = '' - nome da tabela
-DB_PASSWORD = '' - senha da tabela
-DB_DIALECT = 'postgres'
-PORT_NUMBER = '5432'
+## 📝 Descrição do Projeto
 
+Este é o backend do projeto VCR Digital, desenvolvido em Node.js com o framework Express. A aplicação fornece uma API RESTful para gerenciar depoimentos de clientes, utilizando PostgreSQL como banco de dados.
 
-#Criação da Tabela no PgAdmin:
+O objetivo é servir como a fonte de dados para a aplicação React, permitindo a criação, leitura, atualização e exclusão (CRUD) de registros de depoimentos de forma segura e eficiente.
 
-CREATE TABLE depoimentos ( id SERIAL PRIMARY KEY, data TIMESTAMP DEFAULT CURRENT_TIMESTAMP, nome_usuario VARCHAR(255) NOT NULL, mensagem TEXT NOT NULL );
+## 🚀 Tecnologias Utilizadas
 
-SELECT * FROM depoimentos;
+-   **Node.js**: Ambiente de execução JavaScript.
+-   **Express.js**: Framework para construção de APIs.
+-   **PostgreSQL**: Banco de dados relacional.
+-   **`node-postgres` (pg)**: Driver Node.js para o PostgreSQL.
+-   **`dotenv`**: Para gerenciamento de variáveis de ambiente.
+-   **`cors`**: Para permitir requisições de origens diferentes (frontend).
+-   **`nodemon`**: Para reiniciar o servidor automaticamente durante o desenvolvimento.
 
-INSERT INTO depoimentos (data, nome_usuario, mensagem) VALUES ( '02/05/2025', 'Sérgio Costa Almeida', 'Muito bom o serviço fornecido pela VCR, ajudaram bastante no desenvolvimento da minha empresa.'), ( '13/09/2024', 'Maicon Mikael', 'Serviço mal feito, prejudicaram minha empresa no desenvolvimento de marketing digital.'), ( '30/01/2012', 'José de Alencar', 'O serviço feito por eles é de excelente qualidade, feito com muito cuidado em todos os métodos usados. ');
+## 🔧 Instalação e Configuração
+
+### Pré-requisitos
+
+-   **Node.js** (versão 14 ou superior)
+-   **PostgreSQL** instalado e rodando.
+
+### Passos para Instalação
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone <URL_DO_SEU_REPOSITORIO_BACKEND>
+    cd <pasta_do_backend>
+    ```
+
+2.  **Instale as dependências** do projeto:
+    ```bash
+    npm install
+    ```
+
+3.  **Configure as Variáveis de Ambiente:**
+    Crie um arquivo chamado `.env` na raiz do projeto e adicione as suas credenciais do banco de dados e a porta do servidor, seguindo o exemplo abaixo:
+
+    ```dotenv
+    # Arquivo .env
+
+    # Porta onde o servidor vai rodar
+    PORT=3001
+
+    # Credenciais do seu banco de dados PostgreSQL
+    USER_NAME=seu_usuario_postgres
+    HOST_NAME=localhost
+    DB_NAME=sua_database
+    DB_PASSWORD=sua_senha
+    PORT_NUMBER=5432
+    ```
+
+4.  **Estrutura do Banco de Dados:**
+    Certifique-se de que seu banco de dados (`DB_NAME`) possui uma tabela chamada `depoimentos`. Você pode usar o seguinte comando SQL para criá-la:
+
+    ```sql
+    CREATE TABLE depoimentos (
+        id SERIAL PRIMARY KEY,
+        nome_usuario VARCHAR(100) NOT NULL,
+        mensagem TEXT NOT NULL,
+        data_criacao TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    );
+    ```
+
+## ▶️ Executando o Projeto
+
+Para iniciar o servidor em **modo de desenvolvimento** (com reinicialização automática a cada alteração), execute:
+
+```bash
+npm run dev
