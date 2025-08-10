@@ -71,30 +71,7 @@ Para iniciar o servidor em **modo de desenvolvimento** (com reinicialização au
 
 ```bash
 npm run dev
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 ## 🗺️ Rotas da API
 
 | Método | Endpoint          | Descrição                                 |
