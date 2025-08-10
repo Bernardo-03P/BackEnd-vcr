@@ -71,3 +71,13 @@ Para iniciar o servidor em **modo de desenvolvimento** (com reinicialização au
 
 ```bash
 npm run dev
+
+## 🗺️ Rotas da API
+
+| Método | Endpoint          | Descrição                                 |
+| :----- | :---------------- | :---------------------------------------- |
+| `GET`  | `/depoimentos`    | Lista todos os depoimentos.               |
+| `GET`  | `/depoimentos/:id` | Retorna um depoimento específico.         |
+| `POST` | `/depoimentos`    | Cria um novo depoimento.                  |
+| `PATCH`| `/depoimentos/:id` | Atualiza as informações de um depoimento. |
+| `DELETE`| `/depoimentos/:id`| Deleta um depoimento.                     |
