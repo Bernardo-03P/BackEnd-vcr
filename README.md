@@ -81,3 +81,25 @@ npm run dev
 | `POST` | `/depoimentos`    | Cria um novo depoimento.                  |
 | `PATCH`| `/depoimentos/:id` | Atualiza as informações de um depoimento. |
 | `DELETE`| `/depoimentos/:id`| Deleta um depoimento.                     |
+
+
+Este projeto foi construído com a dedicação e o talento da seguinte equipe:
+
+#### Bernardo Pozzebon Poluceno - *Desenvolvedor Backend*
+Bernardo foi o arquiteto da API, cuidando de toda a lógica do servidor. Suas principais contribuições foram:
+- Estruturação do backend com Node.js e Express.
+- Desenvolvimento das rotas da API (GET, POST, PATCH, DELETE).
+- Implementação da conexão com o banco de dados PostgreSQL.
+- **[GitHub](https://github.com/Bernardo-03P)** 
+
+#### Jordan Soares Aguiar - *Desenvolvedor Frontend & Banco de Dados*
+Jordan foi o responsável por dar vida ao painel de gerenciamento, conectando o visual à funcionalidade. Suas principais contribuições foram:
+- Desenvolvimento da interface de administração em React.
+- Criação e estruturação da tabela `depoimentos` no PostgreSQL.
+- **[GitHub](https://github.com/Jordan0725)** 
+
+#### Lucas Casemiro de Freitas Frarre - *Designer e Pesquisador*
+Lucas definiu a identidade visual do projeto e ajudou a traçar o caminho inicial. Suas principais contribuições foram:
+- Criação do design e dos layouts para as interfaces do sistema.
+- Pesquisa de referências e auxílio no planejamento geral do projeto.
+- **[GitHub](https://github.com/lucascasemiro)** 
